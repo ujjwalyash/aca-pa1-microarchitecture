@@ -18,6 +18,6 @@ void matmul_naive(const float* A, const float* B, float* C,
             C[static_cast<long>(i) * ldc + j] = acc;
         }
     }
-
-    // matmul_optimized(A, B, C, M, N, K, lda, ldb, ldc);
+                    
+    // matmul_prefetch(A, B, C, M, N, K, lda, ldb, ldc);
 }

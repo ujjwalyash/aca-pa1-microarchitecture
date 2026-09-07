@@ -1,0 +1,33 @@
+prefetch:
+prefetch instr at the end
+    128 6.27
+    256 5.62
+    512 5.05
+   1024 4.87
+   2048 4.73
+   4096 4.57
+
+fmt:  gflops, 
+base 
+    256  5.62  5.56
+    512  5.05
+    1024 4.84
+    2048 4.69
+
+prefetch instr at top
+
+dist = 2, lvl = T0
+
+    128 
+    256 
+    512 
+   1024 
+   2048 4.65
+   4096 4.48
+
+dist = 1, lvl = T0
+   2048 4.68
+
+dist = 3, lvl = T0
+    2048 4.69 
+

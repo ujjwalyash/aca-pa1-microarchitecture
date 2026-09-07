@@ -12,6 +12,7 @@
 // Every stage's result is checked against the naive reference (relative tolerance), so a
 // "yes" in the correct column means your kernel is numerically right on that input.
 
+#include <array>
 #include <cstdio>
 #include <cstdlib>
 #include <cstring>
@@ -29,6 +30,8 @@ static constexpr float kRelTol = 1e-4f;
 // are heavier than Task 1's, so fewer reps.
 static constexpr int kWarmup = 1;
 static constexpr int kReps = 3;
+
+static constexpr int size = 1024;
 
 // Default workload and seed. Square M=N=K=kDefN. (Chosen so the working set exceeds L2, so
 // cache tiling matters, while the run stays tolerable.)
@@ -241,6 +244,9 @@ int main(int argc, char** argv) {
         return 1;
     }
 
-    run_config(M, N, K, seed, stage, /*show=*/true, /*scored=*/false);
+    // std::array<int, 6> sizes{128, 256, 512, 1024, 2048, 4096};
+    // for(int sz: sizes)
+    run_config(size, size, size, seed, stage, /*show=*/true, /*scored=*/false);
+    // run_config(M, N, K, seed, stage, /*show=*/true, /*scored=*/false);
     return 0;
 }
