@@ -1,0 +1,11 @@
+ls
+cd task1/
+make
+./bin/conv 1234 8 67
+./bin/conv all 1234 8 67
+./bin/conv
+cd ../task2/
+make
+./bin/matmul all 1234 520 67
+make llama-demo 
+./bin/matmul all 1234 520 67
